@@ -24,9 +24,9 @@ public class ContestReplayControl implements PropertyListener, ContestUpdateList
 	private boolean showingPresentation = false;
 	private boolean hasFinishedReplayer = false;
 	private String state = "";
-	private int replayDelay = 0;
-	private int resolveProblemDelay = 0;
-	private int resolveTeamDelay = 0;
+	private int replayDelay = 2000;
+	private int resolveProblemDelay = 500;
+	private int resolveTeamDelay = 1000;
 	private boolean showRegionalWinners = false;
 	private Timer timer;
 
@@ -236,7 +236,7 @@ public class ContestReplayControl implements PropertyListener, ContestUpdateList
 		if (winnerString == null || winnerString.length() == 0) {
 			//winnerString = "ICPC 2011 Champions";
 			//winnerString = "ICPC 2012 Champions";
-			winnerString = "ICPC 2013 Champions";
+			winnerString = "NWERC 2014 Champions";
 		}
 		if(updateStepCounter) {
 			++stepCounter;
