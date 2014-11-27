@@ -15,6 +15,8 @@ import se.kth.livetech.properties.ui.ToggleButton;
 public class ScoreboardAutoScrollPanel extends JPanel implements Runnable, PropertyListener {
 	private IProperty base;
 
+	public static final int NUM_PAGES = 5;
+
 	public ScoreboardAutoScrollPanel(IProperty base) {
 		this.base = base;
 		Box b = new Box(BoxLayout.Y_AXIS);
@@ -25,11 +27,9 @@ public class ScoreboardAutoScrollPanel extends JPanel implements Runnable, Prope
 		c.add(new Text(base.get("score.page")));
 		b.add(c);
 
-		b.add(new ToggleButton(base.get("score.page"), Integer.toString(1), "Page 1"));
-		b.add(new ToggleButton(base.get("score.page"), Integer.toString(2), "Page 2"));
-		b.add(new ToggleButton(base.get("score.page"), Integer.toString(3), "Page 3"));
-		b.add(new ToggleButton(base.get("score.page"), Integer.toString(4), "Page 4"));
-		b.add(new ToggleButton(base.get("score.page"), Integer.toString(5), "Page 5"));
+		for (int i = 1; i <= NUM_PAGES; i++) {
+			b.add(new ToggleButton(base.get("score.page"), Integer.toString(i), "Page " + i));
+		}
 
 		c = new Box(BoxLayout.X_AXIS);
 		c.add(new JLabel("First delay (s): "));
@@ -68,7 +68,7 @@ public class ScoreboardAutoScrollPanel extends JPanel implements Runnable, Prope
 			} catch (InterruptedException e) {}
 
 			if (enabled.getBooleanValue()) {
-				page.setIntValue((page.getIntValue() % 5) + 1);
+				page.setIntValue((page.getIntValue() % NUM_PAGES) + 1);
 			}
 		}
 
