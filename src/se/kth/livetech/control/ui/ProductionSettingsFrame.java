@@ -31,6 +31,7 @@ public class ProductionSettingsFrame extends JFrame{
 		// Production
 		String production = "org.icpc_cli.presentation.contest.internal.presentations.ProductionPresentation";
 		String zero = "org.icpc_cli.presentation.core.internal.presentations.ZeroTimePresentation";
+		/*
 		addField("presentation", "Production", production, "X", zero);
 		addField("vnc.host", "VNC Host", "icpc-01.csc.kth.se");
 		addField("vnc.port", "VNC Port", "59000");
@@ -38,9 +39,10 @@ public class ProductionSettingsFrame extends JFrame{
 		addField("cam.port", "Cam Port", "58000");
 		addCombo("control", "Control commands", new String[] {"exitfullscreen","fullscreen0","fullscreen1"});
 		addCombo("format", "Video format", new String[] {"SD","HD","projector"});
+		*/
 		addCheckbox("nofps", "no fps");
 		addPanAndZoom("clockrect", "Clock");
-		addPanAndZoom("logopz", "Logo");
+		// addPanAndZoom("logopz", "Logo");
 		JButton autoPage = new JButton("Auto Page");
 		b.add(autoPage);
 		autoPage.addActionListener(new ActionListener() {
