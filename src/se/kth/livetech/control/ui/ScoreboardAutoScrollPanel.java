@@ -15,7 +15,7 @@ import se.kth.livetech.properties.ui.ToggleButton;
 public class ScoreboardAutoScrollPanel extends JPanel implements Runnable, PropertyListener {
 	private IProperty base;
 
-	public static final int NUM_PAGES = 5;
+	public static final int NUM_PAGES = 4;
 
 	public ScoreboardAutoScrollPanel(IProperty base) {
 		this.base = base;
