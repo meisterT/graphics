@@ -121,7 +121,7 @@ public class ProductionPanel extends JPanel implements ActionListener {
                 }
             });
         d.add(load);
-		c.add(d);
+		//c.add(d);
 		d = new Box(BoxLayout.Y_AXIS);
 		Box e = new Box(BoxLayout.X_AXIS);
 		e.add(new JLabel("Name: "));
@@ -146,7 +146,7 @@ public class ProductionPanel extends JPanel implements ActionListener {
 		e.add(this.combo);
 		d.add(e);
 		c.add(d);
-		b.add(c);
+		//b.add(c);
 		//b.add(new JSeparator(SwingConstants.HORIZONTAL));
 
 		TitledBorder interviewBorder;
@@ -164,7 +164,7 @@ public class ProductionPanel extends JPanel implements ActionListener {
 		c.add(new CheckBox(base.get("team.show_members"), "Members"));
 		c.add(new CheckBox(base.get("team.show_extra"), "Extra"));
 		c.add(new CheckBox(base.get("team.show_results"), "Results"));
-		b.add(c);
+		// b.add(c);
 
 		//b.add(new JSeparator(SwingConstants.HORIZONTAL));
 
@@ -183,7 +183,7 @@ public class ProductionPanel extends JPanel implements ActionListener {
 		c = new Box(BoxLayout.X_AXIS);
 		c.add(new JLabel("Team #"));
 		c.add(new Slider.Int(base.get("team.team"), 1, 105));
-		b.add(c);
+		//b.add(c);
 
 		c = new Box(BoxLayout.X_AXIS);
 		c.add(new ToggleButton(base.get("mode"), "countdown", "Countdown"));

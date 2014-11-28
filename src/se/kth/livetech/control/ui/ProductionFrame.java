@@ -161,8 +161,8 @@ public class ProductionFrame extends JFrame implements PropertyListener {
 		
 		QuickControlPanel qcp = new QuickControlPanel(clients, base.get("team"));
 		qcp.setAlignmentX(0);
-		a.add(qcp);
-		b.add(a);
+		// a.add(qcp); // don't add quick control panel
+		//b.add(a);
 		c.add(b);
 		getContentPane().add(c);
 		
